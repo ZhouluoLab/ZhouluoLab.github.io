@@ -119,14 +119,6 @@ a {
   gap: 8px;
 }
 
-.site-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
-  min-width: 0;
-}
-
 .site-nav a {
   border-radius: 999px;
   color: var(--muted);
@@ -141,9 +133,11 @@ a {
 }
 
 .theme-menu {
-  position: relative;
+  position: fixed;
+  top: 14px;
+  right: max(14px, calc((100vw - 1900px) / 2 + 18px));
+  z-index: 50;
   display: inline-flex;
-  flex: 0 0 auto;
   justify-content: flex-end;
 }
 
@@ -284,17 +278,12 @@ main {
   border-radius: var(--radius);
 }
 
-.recent-date,
 .recent-item time,
 .countdown-item time {
   display: block;
   color: var(--muted);
   font-family: "Times New Roman", Times, serif;
   font-size: 0.88rem;
-}
-
-.recent-date.pending {
-  font-family: "TitleMixed", "STXinwei", "华文新魏", "Times New Roman", serif;
 }
 
 .recent-type {
@@ -866,11 +855,6 @@ li {
   color: var(--muted);
 }
 
-.award-issuer {
-  color: var(--ink);
-  font-weight: 700;
-}
-
 .award-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1277,10 +1261,6 @@ li {
   padding: 18px;
   box-shadow: none;
   transition: border-color 0.18s ease, transform 0.18s ease;
-}
-
-.knowledge-card-muted {
-  color: inherit;
 }
 
 .paper-note-detail {
@@ -1752,11 +1732,6 @@ li {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .site-actions {
-    align-items: flex-start;
-    width: 100%;
   }
 
   .site-nav {

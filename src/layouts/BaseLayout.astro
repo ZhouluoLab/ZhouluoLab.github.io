@@ -25,36 +25,34 @@ const {
   <body>
     <header class="site-header">
       <a class="brand" href="/">周罗义迪个人网站</a>
-      <div class="site-actions">
-        <nav class="site-nav" aria-label="主导航">
-          <a href="/">主页</a>
-          <a href="/introduction/">个人介绍</a>
-          <a href="/awards/">获奖情况</a>
-          <a href="/publications/">论文情况</a>
-          <a href="/notes/">个人笔记</a>
-          <a href="/learning/">学习内容</a>
-          <a href="/contact/">联系方式</a>
-        </nav>
-        <div class="theme-menu" data-theme-menu>
-          <button
-            class="theme-menu-toggle"
-            type="button"
-            data-theme-menu-toggle
-            aria-label="主题设置"
-            aria-expanded="false"
-          >
-            <span aria-hidden="true">⚙</span>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="/">主页</a>
+        <a href="/introduction/">个人介绍</a>
+        <a href="/awards/">获奖情况</a>
+        <a href="/publications/">论文情况</a>
+        <a href="/notes/">个人笔记</a>
+        <a href="/learning/">学习内容</a>
+        <a href="/contact/">联系方式</a>
+      </nav>
+      <div class="theme-menu" data-theme-menu>
+        <button
+          class="theme-menu-toggle"
+          type="button"
+          data-theme-menu-toggle
+          aria-label="主题设置"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true">⚙</span>
+        </button>
+        <div class="theme-menu-panel" data-theme-menu-panel hidden>
+          <button class="theme-option" type="button" data-theme-option="light">
+            <span aria-hidden="true">☀</span>
+            <span>白天</span>
           </button>
-          <div class="theme-menu-panel" data-theme-menu-panel hidden>
-            <button class="theme-option" type="button" data-theme-option="light">
-              <span aria-hidden="true">☀</span>
-              <span>白天</span>
-            </button>
-            <button class="theme-option" type="button" data-theme-option="dark">
-              <span aria-hidden="true">☾</span>
-              <span>夜晚</span>
-            </button>
-          </div>
+          <button class="theme-option" type="button" data-theme-option="dark">
+            <span aria-hidden="true">☾</span>
+            <span>夜晚</span>
+          </button>
         </div>
       </div>
     </header>
