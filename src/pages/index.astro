@@ -132,22 +132,45 @@ const countdownEvents = [
       </section>
     </section>
 
-    <aside class="side-panel countdown-panel" aria-label="重要事件倒计时">
-      <div class="side-panel-heading">
-        <span>重要事件倒计时</span>
-        <small>预计日期</small>
-      </div>
-      <div class="countdown-list">
-        {countdownEvents.map((event) => (
-          <article class="countdown-item" data-countdown-date={event.date}>
-            <h2>{event.title}</h2>
-            <p class="countdown-days" data-countdown-days>计算中</p>
-            <time>{event.date.slice(0, 10)}</time>
-            <p>{event.note}</p>
-          </article>
-        ))}
-      </div>
-    </aside>
+    <div class="right-rail">
+      <aside class="side-panel countdown-panel" aria-label="重要事件倒计时">
+        <div class="side-panel-heading">
+          <span>重要事件倒计时</span>
+          <small>预计日期</small>
+        </div>
+        <div class="countdown-list">
+          {countdownEvents.map((event) => (
+            <article class="countdown-item" data-countdown-date={event.date}>
+              <h2>{event.title}</h2>
+              <p class="countdown-days" data-countdown-days>计算中</p>
+              <time>{event.date.slice(0, 10)}</time>
+              <p>{event.note}</p>
+            </article>
+          ))}
+        </div>
+      </aside>
+
+      <aside class="side-panel stats-panel" aria-label="网站统计信息">
+        <div class="side-panel-heading">
+          <span>统计信息</span>
+          <small>访问记录</small>
+        </div>
+        <div class="stats-list">
+          <div class="stats-item" id="busuanzi_container_site_pv">
+            <span>总浏览量</span>
+            <strong><span id="busuanzi_value_site_pv">--</span></strong>
+          </div>
+          <div class="stats-item" id="busuanzi_container_site_uv">
+            <span>访客人数</span>
+            <strong><span id="busuanzi_value_site_uv">--</span></strong>
+          </div>
+          <div class="stats-item" id="busuanzi_container_page_pv">
+            <span>本页浏览</span>
+            <strong><span id="busuanzi_value_page_pv">--</span></strong>
+          </div>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <script>
@@ -186,4 +209,6 @@ const countdownEvents = [
     updateCountdowns();
     window.setInterval(updateCountdowns, 1000);
   </script>
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </BaseLayout>

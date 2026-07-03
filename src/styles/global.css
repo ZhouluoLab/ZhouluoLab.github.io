@@ -229,6 +229,11 @@ main {
   min-width: 0;
 }
 
+.right-rail {
+  display: grid;
+  gap: 16px;
+}
+
 .side-panel {
   padding: 20px;
   background: var(--surface);
@@ -329,6 +334,39 @@ main {
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
+}
+
+.stats-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.stats-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+}
+
+.stats-item span {
+  color: var(--muted);
+}
+
+.stats-item strong {
+  color: var(--accent);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.18rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.stats-item strong span {
+  color: inherit;
 }
 
 h2,
