@@ -25,7 +25,10 @@ export const awardItems = [
     dateLabel: "2025年9月",
     type: "获奖",
     title: "国家级大创（SRTP）立项",
-    evidenceImage: "/images/awards/srtp-national-project.png"
+    evidenceImage: "/images/awards/srtp-national-project-completion-certificate.png",
+    recordImages: [
+      "/images/awards/srtp-national-project.png"
+    ]
   },
   {
     slug: "computer-design-provincial-first",
@@ -36,4 +39,3 @@ export const awardItems = [
     evidenceImage: "/images/awards/computer-design-provincial-first.png"
   }
 ];
-
