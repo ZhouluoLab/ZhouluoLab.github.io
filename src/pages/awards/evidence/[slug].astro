@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 const { award, awardNote } = Astro.props;
 const renderedAwardNote = awardNote ? await render(awardNote) : null;
 const AwardNoteContent = renderedAwardNote?.Content;
+const evidenceImages = award.evidenceImages ?? (award.evidenceImage ? [award.evidenceImage] : []);
 ---
 
 <BaseLayout title={`${award.title} | ${evidenceLabel}`} description={`${award.title}\u7684${evidenceLabel}\u3002`}>
@@ -43,7 +44,16 @@ const AwardNoteContent = renderedAwardNote?.Content;
             <AwardNoteContent />
           </section>
         )}
-        <img src={award.evidenceImage} alt={`${award.title} ${evidenceLabel}`} />
+        {evidenceImages.length === 1 && (
+          <img src={evidenceImages[0]} alt={`${award.title} ${evidenceLabel}`} />
+        )}
+        {evidenceImages.length > 1 && (
+          <div class="evidence-record-grid">
+            {evidenceImages.map((image, index) => (
+              <img src={image} alt={`${award.title} ${evidenceLabel} ${index + 1}`} />
+            ))}
+          </div>
+        )}
         {award.recordImages && award.recordImages.length > 0 && (
           <section class="evidence-records">
             <h3>比赛记录</h3>
